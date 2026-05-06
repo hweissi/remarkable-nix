@@ -14,10 +14,10 @@
   in {
     packages = forAllSystems (system: let
       pkgs = import nixpkgs {inherit system;};
-      version = "3.26.1.1379";
+      version = "3.27.0.1446";
       installer = pkgs.fetchurl {
         url = "https://downloads.remarkable.com/desktop/production/win/reMarkable-${version}-win64.exe";
-        sha256 = "sha256-qsgSrCePKm/kM6aIEGYl3PrH7RBDDrZ0CQWey1jeRoA=";
+        sha256 = "sha256-LOfQpwRB5tZZfPopDsw1jTasdUuqMXedj3Gi2vsA+HM=";
       };
 
       remarkableApp = pkgs.stdenvNoCC.mkDerivation {
